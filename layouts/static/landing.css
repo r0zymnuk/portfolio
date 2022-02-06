@@ -1,0 +1,162 @@
+:root{
+    --main: #fcfaf0;
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'skolasansbold';
+}
+p{
+    font-family: 'skolasansmedium';
+}
+
+body{
+    background-color: var(--main);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'skolasansregular';
+}
+
+header{
+    overflow: hidden;
+    background-color: var(--main);
+    color: #000;
+    width: 100vw;
+    height: 12vh;
+    line-height: 12vh;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-between;
+    top: 0px;
+    position: sticky;
+    border-bottom: 0.5mm solid #000;
+    outline: 0;
+    transition: all .3s;
+}
+header.on-top{
+    height: 14vh;
+    border-bottom: 0.5mm solid rgba(255,255,255,0);
+    background: rgba(255,255,255,0);
+}
+
+#head-logo{
+    font-size: 1.2rem;
+    font-family: 'skolasansblack';
+    width: 18rem;
+    height: 100%;
+    transition: all .4s;
+}
+header.on-top #head-logo{
+    height: 14vh;
+    padding-top: 1vh;
+    font-size: 1.3rem
+}
+#head-menu-div{
+    width: 35rem;
+    vertical-align: middle;
+    text-align: center;
+}
+ul{
+    list-style: none;
+    display: inline-flex;
+}
+.menu-item{
+    font-size: 1.05rem;
+    position: relative;
+    height: 12vh;
+    width: 8rem;
+    transition: all 0.4s;
+}
+header.on-top .menu-item{
+    height: 14vh;
+    padding-top: 1vh;
+    font-size: 1.1rem;
+}
+.menu-item:hover{
+    background-color: #edebe1;
+    border-bottom: 0.5mm solid #edebe1;
+    outline: 0;
+}
+
+
+main{
+    width: 65%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.main-content{
+    background-color: var(--main);
+    width:100%;
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    margin-top: 50px;
+    z-index: 10;
+}
+.main-content > *{
+    margin-bottom: 1rem;
+}
+.main-content h2{
+    font-weight: 600;
+}
+.main-content p{
+    font-weight: 600;
+    font-family: 'skolasanslight';
+}
+.main-content h3{
+    font-weight: 600;
+    font-family: 'skolasansregular';
+}
+
+
+/**/
+.post_date{
+    float: right;
+}
+
+/*Form*/
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    background-color: var(--main);
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'skolasansregular';
+    border: 0px solid #000;
+    padding: 8px;
+    -webkit-box-shadow: 0px 0px 8px 3px rgba(31, 48, 62, 0.19) inset;
+-moz-box-shadow: 0px 0px 8px 3px rgba(31, 48, 62, 0.19) inset;
+box-shadow: 0px 0px 8px 3px rgba(31, 48, 62, 0.19) inset;
+}
+.from:focus{
+    outline: none;
+}
+.form_textinput{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form_textarea{
+    max-width: 100%;
+}
+.btn-submit{
+    width: 125px;
+    height: 25px;
+    font-family: 'skolasansregular';
+
+}
