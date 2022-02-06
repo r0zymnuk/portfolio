@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}Blog{% endblock %}
+
+{% block main_content %}
+    {% if posts %}
+        {% for post in posts %}
+            <a href="{% url 'post_detail' post.id %}">
+                <div class="main-content">
+                    <h3 class="post_title">{{ post.title }}</h3>
+                    <p class="post_text">{{ post.main_text|slice:150 }}{% if post.main_text|length > 150 %}...{% endif %}</p>
+                    <p class="post_date">{{ post.pub_date|date:"d.m.Y H:i" }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    {% else %}
+        <h3>I will post anything soon</h3>
+    {% endif %}
+{% endblock %}

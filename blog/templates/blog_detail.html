@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block main_content %}
+    <div class="main-content">
+        <h3 class="post_title">{{ post.title }}</h3>
+        <p class="post_text">{{ post.main_text }}</p>
+        <p class="post_date">{{ post.pub_date|date:"d M. Y H:i" }}</p>
+    </div>
+{% endblock %}

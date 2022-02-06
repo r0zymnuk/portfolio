@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Create post{% endblock %}
+
+{% block main_content %}
+    <div class="main-content">
+        <h3 class="page_title">Creating new article</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.main_text }}<br>
+            <span>{{ error }}</span><br>
+            <button class="btn btn-submit" type="submit">Submit post</button>
+        </form>
+        <p class="post_date"></p>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'dateInput.js' %}"></script>
+{% endblock %}
